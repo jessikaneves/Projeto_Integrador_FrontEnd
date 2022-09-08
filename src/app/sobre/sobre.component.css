@@ -1,0 +1,10 @@
+ul.submenu{
+    list-style: none;
+    padding: 0;
+}
+
+ul.submenu li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}

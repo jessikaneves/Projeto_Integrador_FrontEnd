@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+
 
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
-import { AppRoutingModule } from './app-routing.module';
+import { SobreComponent } from './sobre/sobre.component';
+
+
+
+
+
+
 
 
 @NgModule({
@@ -16,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     CadastroComponent,
     EntrarComponent,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
