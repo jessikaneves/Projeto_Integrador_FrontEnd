@@ -10,6 +10,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -27,7 +28,8 @@ import { SobreComponent } from './sobre/sobre.component';
     EntrarComponent,
     MenuComponent,
     RodapeComponent,
-    SobreComponent
+    SobreComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
