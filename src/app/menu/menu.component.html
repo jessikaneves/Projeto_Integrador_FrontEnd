@@ -11,22 +11,31 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
+          <a routerLink="/inicio">Início <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Produtos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nós</a>
-          </li>
-         
-        
-       
+            <a routerLink="/sobre">Sobre nós</a>
+          </li>        
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
+      <ul>
+        <li class="nav-item pl-3">
+          <p class="m-0  font-weight-bold text-primary text-center">Olá, {{nome}}</p>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto d-flex align-items-center">
+        <li class="nav-item pl-3">
+          <a (click)="sair()" class="m-0 font-weight-bold text-dark fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
     </div>
+
+   
   </nav>
 
