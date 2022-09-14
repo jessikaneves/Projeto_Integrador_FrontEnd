@@ -1,7 +1,7 @@
 import { Produtos } from "./Produtos"
 
-export class Categotia{
+export class Categoria{
     public id: number
     public categorias: string
-    public produto:Produtos[]
+    public produto: Produtos[]
 }
