@@ -13,6 +13,8 @@ import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 
 
@@ -33,7 +35,9 @@ import { ProdutoComponent } from './produto/produto.component';
     SobreComponent,
     InicioComponent,
     CategoriaComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent
   ],
   imports: [
     BrowserModule,

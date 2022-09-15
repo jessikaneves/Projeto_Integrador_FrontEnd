@@ -6,6 +6,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 const routes: Routes = [
 
@@ -16,9 +18,14 @@ const routes: Routes = [
   {path: 'cadastrar', component: CadastroComponent},
 
   {path: 'inicio', component: InicioComponent},
-  {path: 'categorias', component: CategoriaComponent},
   {path: 'sobre', component: SobreComponent},
-  {path: 'produtos', component: ProdutoComponent}
+  
+  {path: 'categorias', component: CategoriaComponent},
+  {path: 'produtos', component: ProdutoComponent},
+
+  {path: 'categoria-edit/:id', component: CategoriaEditComponent},
+  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent}
+
   
     
   ];
