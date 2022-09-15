@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produtos } from '../model/Produtos';
 import { User } from '../model/User';
-//import { AuthService } from '../service/auth.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
 
@@ -30,7 +30,7 @@ export class ProdutoComponent implements OnInit {
     private router: Router,
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
-    //private authService: AuthService
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -57,6 +57,12 @@ export class ProdutoComponent implements OnInit {
       this.listaProdutos = resp
     })
   }
+  findByIdUser(){
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User)=>{
+      this.user = resp
+    })
+
+  }
   publicar(){
     this.categoria.id=this.idCategoria
     this.produtos.categoria = this.categoria
@@ -68,6 +74,7 @@ export class ProdutoComponent implements OnInit {
       this.produtos =resp
       alert("Postagem realizada com sucesso!")
       this.produtos =new Produtos()
+      this.getAllProdutos()
     })
   }
 
