@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produtos } from '../model/Produtos';
 import { User } from '../model/User';
-//import { AuthService } from '../service/auth.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutosService } from '../service/produtos.service';
 
@@ -26,11 +26,14 @@ export class ProdutoComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+  key  = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private produtosService: ProdutosService,
     private categoriaService: CategoriaService,
-    //private authService: AuthService
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
