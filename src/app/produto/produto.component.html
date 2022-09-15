@@ -48,7 +48,7 @@
 
       <div class="card-columns ">
       <!-- <div class="card-deck"> -->
-        <div class="card text-center" *ngFor="let item of listaProdutos">
+        <div class="card text-center" *ngFor="let item of listaProdutos | orderBy : key : reverse">
           <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
           <div class="card-body">
             <h5 class="card-title">{{item.nomeProduto}}</h5>
@@ -60,9 +60,9 @@
       <!-- produtos por categoria -->
       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         
-        <div class="card-columns" *ngFor="let categoria of listaCategoria">
+        <div class="card-columns" *ngFor="let categoria of listaCategoria | orderBy : key : reverse">
           <!-- <div class="card-deck"> -->
-            <div class="card text-center" *ngFor="let item of categoria.produto">
+            <div class="card text-center" *ngFor="let item of categoria.produto | orderBy : key : reverse">
               <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
               <div class="card-body">
                 <h5 class="card-title">{{item.nomeProduto}}</h5>
