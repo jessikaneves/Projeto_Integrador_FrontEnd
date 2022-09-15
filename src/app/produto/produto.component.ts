@@ -19,7 +19,7 @@ export class ProdutoComponent implements OnInit {
   listaProdutos:Produtos[]
 
 
-  categoria: Categoria = new Categoria
+  categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
   idCategoria: number
 
@@ -34,6 +34,7 @@ export class ProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
