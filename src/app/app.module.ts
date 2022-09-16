@@ -20,12 +20,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
-import { OrderModule } from 'ngx-order-pipe';
 
-
-import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
-import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
-import { OrderModule } from 'ngx-order-pipe';
 
 
 
@@ -44,10 +39,7 @@ import { OrderModule } from 'ngx-order-pipe';
     ProdutoComponent,
     CategoriaEditComponent,
     CategoriaDeleteComponent,
-
     UserEditComponent,
-
-
     ProdutosEditComponent,
     ProdutosDeleteComponent
   ],
@@ -56,7 +48,6 @@ import { OrderModule } from 'ngx-order-pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
