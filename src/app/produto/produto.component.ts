@@ -16,7 +16,7 @@ import { ProdutosService } from '../service/produtos.service';
 export class ProdutoComponent implements OnInit {
 
   produtos: Produtos = new Produtos()
-  listaProdutos:Produtos[]
+  listaProdutos: Produtos[]
 
 
   categoria: Categoria = new Categoria()
@@ -48,19 +48,19 @@ export class ProdutoComponent implements OnInit {
     this.getAllProdutos()
   }
 
-  getAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+  getAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
     })
 
-    }
-    findByIdCategoria(){
-       this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
-        this.categoria =resp
-       })
-    }
-  getAllProdutos(){
-    this.produtosService.getAllProdutos().subscribe((resp: Produtos[])=>{
+  }
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
+  getAllProdutos() {
+    this.produtosService.getAllProdutos().subscribe((resp: Produtos[]) => {
       this.listaProdutos = resp
     })
   }
@@ -98,9 +98,9 @@ export class ProdutoComponent implements OnInit {
     this.user.id = this.idUser
     this.produtos.usuario = this.user
 
-    this.produtosService.postProdutos(this.produtos).subscribe((resp: Produtos)=>{
-      this.produtos =resp
-      alert("Postagem realizada com sucesso!")
+    this.produtosService.postProdutos(this.produtos).subscribe((resp: Produtos) => {
+      this.produtos = resp
+      alert("Produto cadastrado com sucesso!")
       this.produtos =new Produtos()
       this.getAllProdutos()
     })
