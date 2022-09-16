@@ -19,7 +19,7 @@ export class ProdutoComponent implements OnInit {
   listaProdutos:Produtos[]
 
 
-  categoria: Categoria = new Categoria
+  categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
   idCategoria: number
 
@@ -29,6 +29,9 @@ export class ProdutoComponent implements OnInit {
   key  = 'data'
   reverse = true
 
+  nomeProd: string
+  nomeCateg: string
+
   constructor(
     private router: Router,
     private produtosService: ProdutosService,
@@ -37,6 +40,7 @@ export class ProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
@@ -66,6 +70,27 @@ export class ProdutoComponent implements OnInit {
     })
 
   }
+  findByNomeProduto(){
+
+    if(this.nomeProd == ''){
+      this.getAllProdutos()
+    } else {
+      this.produtosService.getByNomeProduto(this.nomeProd).subscribe((resp: Produtos[]) => {
+        this.listaProdutos = resp
+      })
+    }
+  }
+
+  findByNomeCategoria(){
+    if(this.nomeCateg == ''){
+      this.getAllCategoria()
+    } else {
+      this.categoriaService.getByNomeCategoria(this.nomeCateg).subscribe((resp: Categoria[]) => {
+        this.listaCategoria = resp
+      })
+    }
+  }
+
   publicar(){
     this.categoria.id=this.idCategoria
     this.produtos.categoria = this.categoria
