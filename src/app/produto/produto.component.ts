@@ -29,6 +29,9 @@ export class ProdutoComponent implements OnInit {
   key  = 'data'
   reverse = true
 
+  nomeProd: string
+  nomeCateg: string
+
   constructor(
     private router: Router,
     private produtosService: ProdutosService,
@@ -67,6 +70,27 @@ export class ProdutoComponent implements OnInit {
     })
 
   }
+  findByNomeProduto(){
+
+    if(this.nomeProd == ''){
+      this.getAllProdutos()
+    } else {
+      this.produtosService.getByNomeProduto(this.nomeProd).subscribe((resp: Produtos[]) => {
+        this.listaProdutos = resp
+      })
+    }
+  }
+
+  findByNomeCategoria(){
+    if(this.nomeCateg == ''){
+      this.getAllCategoria()
+    } else {
+      this.categoriaService.getByNomeCategoria(this.nomeCateg).subscribe((resp: Categoria[]) => {
+        this.listaCategoria = resp
+      })
+    }
+  }
+
   publicar(){
     this.categoria.id=this.idCategoria
     this.produtos.categoria = this.categoria
