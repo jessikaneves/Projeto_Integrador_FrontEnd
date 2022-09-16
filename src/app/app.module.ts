@@ -15,18 +15,9 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
-<<<<<<< HEAD
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
-=======
 import { OrderModule } from 'ngx-order-pipe';
->>>>>>> 28e089bb55413abc1e6923f3fd7a70ffb0a50600
-
-
-
-
-
-
 
 
 
