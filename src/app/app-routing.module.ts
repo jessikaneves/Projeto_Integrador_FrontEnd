@@ -12,6 +12,7 @@ import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.compon
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
+
 const routes: Routes = [
 
   {path: '', redirectTo: 'entrar', pathMatch:"full"},
@@ -26,9 +27,15 @@ const routes: Routes = [
   {path: 'categoria-edit/:id', component: CategoriaEditComponent},
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
   
+
   {path: 'produtos', component: ProdutoComponent},
   {path: 'produtos-edit/:id', component: ProdutosEditComponent},
   {path: 'produtos-delete/:id',component: ProdutosDeleteComponent},
+  {path: 'produtos-edit/:id', component: ProdutosEditComponent},
+  {path: 'produtos-delete/:id',component: ProdutosDeleteComponent}
+
+  ];
+
   
   {path:  'user-edit/:id', component: UserEditComponent}
 
