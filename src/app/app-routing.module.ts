@@ -8,9 +8,11 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+
+
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
-import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 const routes: Routes = [
@@ -31,15 +33,15 @@ const routes: Routes = [
   {path: 'produtos', component: ProdutoComponent},
   {path: 'produtos-edit/:id', component: ProdutosEditComponent},
   {path: 'produtos-delete/:id',component: ProdutosDeleteComponent},
-  {path: 'produtos-edit/:id', component: ProdutosEditComponent},
-  {path: 'produtos-delete/:id',component: ProdutosDeleteComponent}
+
+  {path:  'user-edit/:id', component: UserEditComponent}
 
   ];
 
   
-  {path:  'user-edit/:id', component: UserEditComponent}
+  
 
-  ];
+ 
 
   @NgModule({
     imports: [RouterModule.forRoot(routes)],

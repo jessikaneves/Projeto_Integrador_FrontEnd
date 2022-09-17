@@ -8,8 +8,6 @@
 
           <img class="banner ml-4" src="https://i.imgur.com/xk7B0Kr.png
           " alt="">
-          
-          <img class="banner ml-4" src="https://i.imgur.com/PwZK14s.png" alt="">
 
         </div>
       </div>
@@ -18,7 +16,6 @@
         <div class="col-md-6">
           <button class="btn btn-primary mr-2" data-toggle="modal" data-target="#novoProduto">Cadastrar novo
             produto</button>
-          <a class="btn btn-outline-primary" href="#produtos">Ver produtos cadastrados</a>
         </div>
       </div>
 
@@ -48,9 +45,6 @@
 
       <div class="card-columns ">
 
-
-        <div class="card text-center" *ngFor="let item of listaProdutos">
-
         <div class="card text-center" *ngFor="let item of listaProdutos">
 
           <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
@@ -69,8 +63,6 @@
       <!-- produtos por categoria -->
       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         
-
-        <div class="card-columns" *ngFor="let categoria of listaCategoria">
 
         <div class="card-columns" *ngFor="let categoria of listaCategoria">
 
@@ -131,14 +123,9 @@
 
         <div class="form-group">
           <label for="categoria">Selecione uma categoria ou <a routerLink='/categorias' data-dismiss="modal">cadastre uma nova:</a></label>
-          <select name="categoria" id="categoria" class="form-control" [(ngModel)]="idCategoria" (change)="findByIdCategoria() " >
+          <select name="categoria" id="categoria" class="form-control" [(ngModel)]="idCategoria" (change)="findByIdCategoria()">
 
-            
-
-            <option *ngFor="let item of listaCategoria value="{{item.id}}">
-
-              {{item.categorias}}
-            </option>
+            <option *ngFor="let item of listaCategoria" value="{{item.id}}">{{item.categorias}}</option>
           </select>
         </div>
 
