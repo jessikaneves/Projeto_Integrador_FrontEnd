@@ -29,7 +29,7 @@ export class ProdutoComponent implements OnInit {
   key  = 'data'
   reverse = true
 
-  nomeProd: string
+  nomeProduto: string
   nomeCateg: string
 
   constructor(
@@ -72,10 +72,10 @@ export class ProdutoComponent implements OnInit {
   }
   findByNomeProduto(){
 
-    if(this.nomeProd == ''){
+    if(this.nomeProduto == ''){
       this.getAllProdutos()
     } else {
-      this.produtosService.getByNomeProduto(this.nomeProd).subscribe((resp: Produtos[]) => {
+      this.produtosService.getByNome(this.nomeProduto).subscribe((resp: Produtos[]) => {
         this.listaProdutos = resp
       })
     }

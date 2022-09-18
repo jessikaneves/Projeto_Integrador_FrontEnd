@@ -21,10 +21,6 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +44,7 @@ import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delet
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
