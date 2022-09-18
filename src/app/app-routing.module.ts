@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -35,9 +35,6 @@ const routes: Routes = [
   {path: 'produtos-delete/:id',component: ProdutosDeleteComponent},
   {path:  'user-edit/:id', component: UserEditComponent}
   ];
-
-  
-
 
 
 
