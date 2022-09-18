@@ -3,26 +3,27 @@
     <span class="navbar-toggler-icon"></span>
   </button>
     <a class="navbar-brand text-warning " href="index.html">
-      <img src="https://i.imgur.com/V6EQ8Bh.png
+      <img routerLink="/inicio"src="https://i.imgur.com/V6EQ8Bh.png
       " width="125" height="" class="d-inline-block align-top" alt="">
     </a>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="mr-3"routerLink="/inicio">Início <span class="sr-only">(current)</span></a>
+          <!-- AUMENTADO A FONTE -->
+          <a class="mr-3 fs"routerLink="/inicio">Início <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="mr-3"routerLink="/produtos" >Produtos</a>
+          <a class="mr-3 fs"routerLink="/produtos" >Produtos</a>
         </li>
         <li class="nav-item">
-            <a  routerLink="/sobre">Sobre nós</a>
+            <a class="fs" routerLink="/sobre">Sobre nós</a>
         </li>        
       </ul>
 
-      <ul>
-        <li class="nav-item pl-3">
-          <p class="m-0  font-weight-bold text-primary text-center">Olá, {{nome}} <a [routerLink]="['/user-edit', id]" >
+      <ul class="m-0 p-0 mt-2 mr-7">
+        <li class="nav-item ">
+          <p class="font-weight-bold text-primary text-center fs">Olá, {{nome}} <a [routerLink]="['/user-edit', id]" >
             <p class="fa fa-pencil fs-16 m-0" aria-hidden="true"></p>
           </a></p>
           
@@ -31,7 +32,8 @@
 
       <ul class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item pl-3">
-          <a (click)="sair()" class="m-0 font-weight-bold text-primary fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <a (click)="sair()" class="m-0 font-weight-bold text-dark fs btn btn-primary">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+             <!-- AUMENTADO A FONTE -->
           </a>
         </li>
       </ul>
